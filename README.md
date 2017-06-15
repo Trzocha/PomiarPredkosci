@@ -15,6 +15,7 @@ Dla każdego zestawu danych pojawiającego się na wejściu należy wypisać lin
 
 IN
 7
+
 1
 1
 20
@@ -97,6 +98,7 @@ IN
 
 OUT
 1 1
+
 0 210
 3334 10000
 0 0
