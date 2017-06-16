@@ -34,13 +34,13 @@ short table_virable[5001];
 
 		scanf("%hu",&survey);
 
-		for(short i=1;i<=survey;i++)             //Wczytanie pomiarów
+		for(short i=1;i<=survey;i++)             //Wczytanie pomiarÃ³w
 		{
 			scanf("%hu",&table[i]);
 			max_total+=table[i];
 		}
 
-		for(short i=2;i<=survey;i++)           //tablica wartosci wg kolejnosci pomiarów a ile zostlo jako sumy do konca
+		for(short i=2;i<=survey;i++)           //tablica wartosci wg kolejnosci pomiarÃ³w a ile zostlo jako sumy do konca
 			if(i!=2)
 				table_virable[i]=table_virable[i-1]-table[i-1];
 			else
@@ -70,10 +70,7 @@ short helpMINUS;
 	{
 		helpMINUS-=table[counter];
 		//if(Absolute2Vir(helpMINUS) < table_virable[counter])                       //445 255
-		//if(helpMINUS >=(-table[counter]) && helpMINUS < table_virable[counter])    //86 217 poprawne wyniki
-		//if(helpMINUS >=0 && helpMINUS < table_virable[counter])                      //17 809 + bledne wyniki
-		//if(helpMINUS >=(-table[counter]) && helpMINUS < table[counter])               //9 105 + bledne wyniki
-		if(helpMINUS >=(-table[counter]) && helpMINUS < table[counter]+6)              //23 836 poprawne wyniki
+		if(helpMINUS >=(-table[counter]) && helpMINUS < table_virable[counter])    //86 217 poprawne wyniki
 		{
 			if(counter != survey)
 				ProgDynamic(helpMINUS,table,table_virable,survey,counter+1);
